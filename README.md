@@ -10,8 +10,8 @@ Put the right things together! ;-)
 In this step we will create the basic environment in Azure. 
 
 For this we need:
-- a Hub network with a Bastion Host
-- a "simulated" OnPrem Spoke network (for Hybrid connectivity)
+- a Hub Network with a Bastion Host
+- a "simulated" OnPrem Spoke Network (for Hybrid connectivity)
 
 A virtual machine will later be deployed into the on-prem spoke network (see Step 2).
 
