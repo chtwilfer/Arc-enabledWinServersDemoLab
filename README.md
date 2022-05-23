@@ -7,13 +7,13 @@ Put the right things together! ;-)
 
 
 ## Step 1 - Deploy Demo Lab via Bicep Github Repo
-With Step 1, we will create the basic environment in Azure. 
+In this step we will create the basic environment in Azure. 
 
 For this we need:
-- a hub network with Bastion Host, VNet, VPN Gateway
-- a "simulated" on-prem spoke network with VNet, gateway and S2S VPN to Hub.
+- a Hub network with a Bastion Host
+- a "simulated" OnPrem Spoke network (for Hybrid connectivity)
 
-A virtual machine will later be deployed into the on-prem spoke network (see step 2).
+A virtual machine will later be deployed into the on-prem spoke network (see Step 2).
 
 
 ### Deploy to Azure
@@ -26,10 +26,8 @@ A virtual machine will later be deployed into the on-prem spoke network (see ste
 > **This deployment is meant for Demo, Test, Learning, Training, Practice or Reproduction purposes ONLY!!**
 > **Please don't deploy to production environments!!**
 
-
-
-
-
+**Note**
+** The original Repo is here: https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder**
 
 
 ## Step 2 - Deploy Azure Virtual Machine in "On-Prem" Resource Group
