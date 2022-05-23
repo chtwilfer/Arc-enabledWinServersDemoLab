@@ -32,8 +32,13 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 
 ## Step 2 - Deploy Azure Virtual Machine in "On-Prem" Resource Group
 
+In this step we will deploy an Virtual Maschine on the OnPrem Spoke Network. 
 
 
+
+
+**Note**
+**The original Repo is here:** https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
 
 
 
