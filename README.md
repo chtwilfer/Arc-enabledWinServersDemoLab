@@ -32,6 +32,18 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 **The original Repo is here:** https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder
 
 
+|Step|Screenshot|
+|-|-|
+|Fill out as shown.*|![Step1](images/HubandSpokeBasisc_1.PNG)|
+|Fill out as shown|![Step2](images/HubVNet_2.PNG)|
+|Fill out as shown*|![Step3](images/SpokeVNet_3.PNG)|
+|Fill out as shown|![Step4](images/OnPremVNet_.PNG)|
+|Fill out as shown|![Step4](images/VirtualMachines_5.PNG)|
+|Setup Tags||
+|Validate and Deploy||
+
+
+
 ## Step 2 - Deploy Azure Virtual Machine plus VM Extention via JSON Template
 
 In this step we will deploy an Virtual Maschine on the OnPrem Spoke Network. 
