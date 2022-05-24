@@ -10,8 +10,10 @@ Put the right things together! ;-)
 In this step we will create the basic environment in Azure. 
 
 For this we need:
-- a Hub Network with a Bastion Host
-- a "simulated" OnPrem Spoke Network (for Hybrid connectivity)
+- one Hub Network with a Bastion Host
+- one Spoke Network (for simulated OnPrem Hybrid connectivity)
+
+I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network instead of an Public IP.
 
 A virtual machine will later be deployed into the on-prem spoke network (see Step 2).
 
