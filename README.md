@@ -1,4 +1,4 @@
-# Arc-enabledWinServersDemoLab
+# Arc-enabled Windows Server - DemoLab
 In this small demo environment I would like to show how easy it is to integrate a Virtual Machine into Azure Arc.
 
 There are countless Github repositories that can be used to build a demo environment in Azure. I chose a repository that allows me to have multiple options at the same time. This repository deployed with Azure Bicep various Hub and Spoke networks. Therefore, I also saved myself the time and did not create a separate repository for it.
