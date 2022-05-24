@@ -51,9 +51,11 @@ In this step we will deploy an Virtual Maschine on the OnPrem Spoke Network.
 Before we deplyo the Virtual Machine we have to ceate a Service Principal and regsiter two Azure Provideers.
 
 ### Example script for Azure Login and Subscription
-  az login
+``` 
+ az login
   subscriptionId=$(az account show --query id --output tsv)
   az ad sp create-for-rbac -n "ArcSP" --role "Contributor" --scopes /subscriptions/$subscriptionId
+```
 
 ### Script for register Azure Provider
   az provider register --namespace 'Microsoft.HybridCompute'
