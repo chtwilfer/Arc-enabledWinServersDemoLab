@@ -50,6 +50,10 @@ In this step we will deploy an Virtual Maschine on the OnPrem Spoke Network.
 
 Before we deplyo the Virtual Machine we have to ceate a Service Principal and regsiter two Azure Provideers.
 
+**Note**
+**The original Repo is here:** https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
+
+
 ### Example script for Azure Login and Subscription
 ``` 
  az login
@@ -63,9 +67,16 @@ Before we deplyo the Virtual Machine we have to ceate a Service Principal and re
  az provider register --namespace 'Microsoft.GuestConfiguration'
 ``` 
 
+### VM Deployment
+```
+az group create --name Arc-Servers-Win-Demo --location "west europe" --tags "Project=azure_arc_servers"
+az deployment group create \
+--resource-group rg-hub \
+--name arcwinsrvdemo \
+--template-file C:\YOUR_FOLDER/azuredeploy.json \
+--parameters azuredeploy.parameters.json
+```
 
-**Note**
-**The original Repo is here:** https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
 
 
 
