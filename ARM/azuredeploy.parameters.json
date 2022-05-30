@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
       "vmSize": {
-          "value": "Standard_B2ms"
+          "value": "Standard_D8s_v3"
       },
       "vmName":{
-          "value": "VM-Hub"
+          "value": "Arc-Win-Demo"
       },
       "adminUsername": {
-        "value": "WinAdmin"
+        "value": "arcdemo"
       },
       "adminPassword": {
-          "value": "Password!123"
+          "value": "ArcPassword123!!"
       },
       "resourceGroup": {
         "value": "rg-hub"
