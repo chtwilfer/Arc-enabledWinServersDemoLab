@@ -65,7 +65,7 @@
         "resourceGroup": {
             "type": "string",
             "metadata": {
-                "description": "Azure resource group"
+                "description": "rg-hub"
             }
         },
         "subscriptionId": {
