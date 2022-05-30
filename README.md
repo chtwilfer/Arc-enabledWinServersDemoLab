@@ -36,9 +36,9 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 |-|-|
 |Fill out as shown|![Step1](images/HubandSpokeBasisc_1.PNG)|
 |Fill out as shown|![Step2](images/HubVNet_2.PNG)|
-|Fill out as shown|![Step3](images/SpokeVNet_3.PNG)|
+|No Spoke VNet|![Step3](images/SpokeVNet_3.PNG)|
 |Fill out as shown|![Step4](images/OnPremVNet_.PNG)|
-|Fill out as shown|![Step4](images/VirtualMachines_5.PNG)|
+|No VMs|![Step4](images/VirtualMachines_5.PNG)|
 |Setup Tags|fill out, whatyou want|
 |Validate and Deploy|click ;-)|
 
