@@ -28,8 +28,8 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 > **This deployment is meant for Demo, Test, Learning, Training, Practice or Reproduction purposes ONLY!!**
 > **Please don't deploy to production environments!!**
 
-**Note**
-The original Repo is here: https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder
+> :note: **Note**
+> The original Repo is here: https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder
 
 
 |Step|Screenshot|
