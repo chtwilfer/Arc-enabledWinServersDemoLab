@@ -28,7 +28,7 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 > **This deployment is meant for Demo, Test, Learning, Training, Practice or Reproduction purposes ONLY!!**
 > **Please don't deploy to production environments!!**
 
-> :note: **Note**
+> **Note**
 > The original Repo is here: https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder
 
 
@@ -50,8 +50,8 @@ In this step we will deploy an Virtual Maschine on the OnPrem Spoke Network.
 
 Before we deploy the Virtual Machine we have to ceate a Service Principal and regsiter two Azure Provideers.
 
-**Note**
-**The original Repo is here:** https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
+> **Note**
+> The original Repo is here: https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
 
 
 ### Example script for Azure Login and Subscription
