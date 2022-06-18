@@ -27,7 +27,7 @@
           "value": "<Azure tenant ID>"
       },
       "subscriptionId": {
-          "value": "<Azure subscription ID>"
+          "value": "b2758c56-3bb1-436b-xxxx-1c8b98c5acdf"
       },
       "location": {
           "value": "westeurope"
