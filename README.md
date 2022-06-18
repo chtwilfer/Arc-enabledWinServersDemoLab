@@ -29,7 +29,7 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 > **Please don't deploy to production environments!!**
 
 **Note**
-**The original Repo is here:** https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder
+The original Repo is here: https://github.com/PieterbasNagengast/Azure-HubSpoke-LabBuilder
 
 
 |Step|Screenshot|
