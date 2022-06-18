@@ -87,11 +87,8 @@ Once the parameters are found and entered into the file, we can now start the de
 
 ```
 az group create --name Arc-Servers-Win-Demo --location "west europe" --tags "Project=azure_arc_servers"
-az deployment group create \
---resource-group rg-hub \
---name arcwinsrvdemo \
---template-file C:\YOUR_FOLDER/azuredeploy.json \
---parameters azuredeploy.parameters.json
+
+az deployment group create --resource-group rg-onprem --name arcwinsrvdemo --template-file C:\temp\Arc-enabledWinServersDemoLab\ARM\azuredeploy.json --parameters https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/ARM/azuredeploy.parameters.json
 ```
 
 ## Step 3 - Azure Portal - Arc Overview
