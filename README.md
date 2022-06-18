@@ -95,3 +95,12 @@ az deployment group create \
 ```
 
 ## Step 3 - Azure Portal - Arc Overview
+
+
+## At the ende
+A few things are still open, but the repository is already usable. In the near future I will complete it accordingly.
+
+Here is my personal bucket list:
+- automatic parameter readout
+- Automatically populate parameters in azuredeploy.parameters.json
+- 2-Step Deployment of the wohle scenario
