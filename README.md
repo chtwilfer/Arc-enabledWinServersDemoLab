@@ -46,7 +46,7 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 
 ## Step 2 - Deploy Azure Virtual Machine plus VM Extention via JSON Template
 
-In this step we will deploy an Virtual Maschine on the OnPrem Spoke Network. 
+In this step we will deploy an Virtual Machine on the OnPrem Spoke Network. 
 
 Before we deploy the Virtual Machine we have to ceate a Service Principal and regsiter two Azure Provideers.
 
@@ -68,7 +68,7 @@ Before we deploy the Virtual Machine we have to ceate a Service Principal and re
 ``` 
 
 ### VM Deployment
-However, before we can create the virtual machine, we must first "read" the parameters to populate the azuredeploy.parameters.json file.
+However, before we can create the Virtual Machine, we must first "read" the parameters to populate the azuredeploy.parameters.json file.
 
 ```
 vmSize =
