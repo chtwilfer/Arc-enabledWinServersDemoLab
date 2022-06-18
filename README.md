@@ -39,7 +39,7 @@ A virtual machine will later be deployed into the on-prem spoke network (see Ste
 |No Spoke VNet|![Step3](images/SpokeVNet_3.PNG)|
 |Fill out as shown|![Step4](images/OnPremVNet_.PNG)|
 |No VMs|![Step4](images/VirtualMachines_5.PNG)|
-|Setup Tags|fill out, whatyou want|
+|Setup Tags|fill out, what you want|
 |Validate and Deploy|click ;-)|
 
 
