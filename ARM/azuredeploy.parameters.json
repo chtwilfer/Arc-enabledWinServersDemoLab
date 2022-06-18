@@ -15,7 +15,7 @@
           "value": "Password!123"
       },
       "resourceGroup": {
-        "value": "rg-hub"
+        "value": "rg-onprem"
       },      
       "appId": {
           "value": "47b46806-5538-4058-bfd9-8e3a486f2261"
