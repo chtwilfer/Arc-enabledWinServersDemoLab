@@ -70,6 +70,7 @@ Before we deploy the Virtual Machine we have to ceate a Service Principal and re
 ### VM Deployment
 However, before we can create the virtual machine, we must first "read" the parameters to populate the azuredeploy.parameters.json file.
 
+```
 vmSize =
 vmName =
 adminUsername =
@@ -80,6 +81,7 @@ password =
 tenantId =
 subscriptionId =
 location =
+```
 
 Once the parameters are found and entered into the file, we can now start the deployment.
 
