@@ -18,16 +18,16 @@
         "value": "rg-hub"
       },      
       "appId": {
-          "value": "<Azure service principal name>"
+          "value": "47b46806-5538-4058-bfd9-8e3a486f2261"
       },
       "password": {
-          "value": "<Azure service principal password>"
+          "value": "rP98Q~UI5rR-sJRQp5rWL-vC1gV0D8CvjWs89b3l"
       },
       "tenantId": {
-          "value": "<Azure tenant ID>"
+          "value": "b9fec68c-c92d-461e-9a97-3d03a0f18b82"
       },
       "subscriptionId": {
-          "value": "b2758c56-3bb1-436b-xxxx-1c8b98c5acdf"
+          "value": "b2758c56-3bb1-436b-ac39-1c8b98c5acdf"
       },
       "location": {
           "value": "westeurope"
