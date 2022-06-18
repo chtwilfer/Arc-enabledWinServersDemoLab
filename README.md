@@ -1,7 +1,7 @@
 # Arc-enabled Windows Server - DemoLab
 In this small demo environment I would like to show how easy it is to integrate a Virtual Machine into Azure Arc.
 
-There are countless Github repositories that can be used to build a demo environment in Azure. I chose a repository that allows me to have multiple options at the same time. This repository deployed with Azure Bicep various Hub and Spoke networks. Therefore, I also saved myself the time and did not create a separate repository for it.
+There are countless Github repositories that can be used to build a demo environment in Azure. I choose a repository that allows me to have multiple options at the same time. This repository deployed with Azure Bicep various Hub and Spoke networks. Therefore, I also saved myself the time and did not create a separate repository for it.
 
 Put the right things together! ;-)
 
@@ -68,6 +68,21 @@ Before we deploy the Virtual Machine we have to ceate a Service Principal and re
 ``` 
 
 ### VM Deployment
+However, before we can create the virtual machine, we must first "read" the parameters to populate the azuredeploy.parameters.json file.
+
+vmSize =
+vmName =
+adminUsername =
+adminPassword =
+resourceGroup = rg-hub
+appId =
+password =
+tenantId =
+subscriptionId =
+location =
+
+Once the parameters are found and entered into the file, we can now start the deployment.
+
 ```
 az group create --name Arc-Servers-Win-Demo --location "west europe" --tags "Project=azure_arc_servers"
 az deployment group create \
@@ -76,8 +91,5 @@ az deployment group create \
 --template-file C:\YOUR_FOLDER/azuredeploy.json \
 --parameters azuredeploy.parameters.json
 ```
-
-
-
 
 ## Step 3 - Azure Portal - Arc Overview
