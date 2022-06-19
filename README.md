@@ -71,7 +71,7 @@ The Virtual Machine was deployed with an PIP. So you can access via RDP.
 > **Note**
 > Use RDP over PIP only für Testing and Demo. Please do not use it for production!
 
-
+Copy this script (https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/install_arc_agent.ps1) to your VM an start with admin rights from Powershell.
 
 
 
