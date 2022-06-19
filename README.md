@@ -53,7 +53,9 @@ I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network i
 
 ``` 
  az login
- Get-AzSubscription | Where-Object -Property State -eq "Enabled" | Out-Gridview -PassThru | Select-AzSubscription
+```
+Select your Subscription and create your SP
+```
  az ad sp create-for-rbac -n "ArcSP" --role "Contributor" --scopes /subscriptions/$subscriptionId
 ```
 
