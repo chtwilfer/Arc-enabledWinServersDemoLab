@@ -44,28 +44,38 @@ I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network i
 
 
 
-## Step 2 - Deploy Azure Virtual Machine plus VM Extention via JSON Template
-
-In this step we will deploy an Virtual Machine on the OnPrem Spoke Network. 
-
-Before we deploy the Virtual Machine we have to ceate a Service Principal and regsiter two Azure Provideers.
+## Step 2 - Config Azure Virtual Machine and onboard to Azure Arc
 
 > **Note**
 > The original Repo is here: https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
 
-
-### Example script for Azure Login and Subscription
+### Create a service principal
+First you have to create a service principal for onboarding VM to Azure Arc.
 ``` 
  az login
  subscriptionId=$(az account show --query id --output tsv)
  az ad sp create-for-rbac -n "ArcSP" --role "Contributor" --scopes /subscriptions/$subscriptionId
 ```
 
-### Script for register Azure Provider
+### Register Azure Provider
+In the next step you have to register some Azure Provider on your subscription. (only for the first time)
 ```  
  az provider register --namespace 'Microsoft.HybridCompute'
  az provider register --namespace 'Microsoft.GuestConfiguration'
 ``` 
+
+### Login to VM
+After you have successfully logged on to your VM you can now start this script to onboard the VM to Azure Arc.
+The Virtual Machine was deployed with an PIP. So you can access via RDP. 
+
+> **Note**
+> Use this only für Testing and Demo. Please use ist not for production.
+
+
+
+
+
+
 
 ### VM Deployment
 However, before we can create the Virtual Machine, we must first "read" the parameters to populate the azuredeploy.parameters.json file.
@@ -92,11 +102,6 @@ az deployment group create --resource-group rg-onprem --name arcwinsrvdemo --tem
 
 ## Step 3 - Azure Portal - Arc Overview
 
+1 to 3 pictures of Arc
 
-## At the ende
-A few things are still open, but the repository is already usable. In the near future I will complete it accordingly.
 
-Here is my personal bucket list:
-- automatic parameter readout
-- Automatically populate parameters in azuredeploy.parameters.json
-- 2-Step Deployment of the wohle scenario
