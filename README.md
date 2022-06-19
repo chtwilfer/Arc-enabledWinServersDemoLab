@@ -64,6 +64,7 @@ In the next step you have to register some Azure Provider on your subscription. 
  az provider register --namespace 'Microsoft.GuestConfiguration'
 ``` 
 
+
 ### Login to VM
 After you have successfully logged on to your VM you can now start this script to onboard the VM to Azure Arc.
 The Virtual Machine was deployed with an Private IP. So you can access via the Bastion in Spoke OnPrem. 
