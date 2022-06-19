@@ -84,12 +84,15 @@ After starting the script you have to fill these parameters:
     $adminUsername
 ```
 Now there is an new folder on C:\temp. In this folder there is a new "LogonScript.ps1".
-With this script you now are able to onboard this VM to Azure Arc. Start this script with Powershell and admin rights.
+With this script you are now able to onboard this VM to Azure Arc. Start this script with Powershell and admin rights.
 
 
 
 ## Step 3 - Azure Portal - Arc Overview
+Just a quick moment and you cann see your VM in Azure Arc.
 
-1 to 3 pictures of Arc
+![Arc Overview](images/Arc_VM_1.png)
+
+## DONE!
 
 
