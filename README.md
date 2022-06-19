@@ -36,7 +36,7 @@ I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network i
 |Fill out as shown|![Step1](images/HubandSpokeBasisc_1.png)|
 |Fill out as shown|![Step2](images/HubVNet_2.PNG)|
 |No Spoke VNet|![Step3](images/SpokeVNet_3.PNG)|
-|Fill out as shown|![Step4](images/OnPremVNet_.PNG)|
+|Fill out as shown|![Step4](images/OnPremVNet_.png)|
 |One VM in Spoke OnPrem|![Step4](images/VirtualMachines_5.png)|
 |Admin Credentials|![Step5](images/VirtualMachines_6.png)|
 |Setup Tags|fill out, what you want|
