@@ -89,7 +89,7 @@ With this script you are now able to onboard this VM to Azure Arc. Start this sc
 
 
 ## Step 3 - Azure Portal - Arc Overview
-Just a quick moment and you cann see your VM in Azure Arc.
+Just a quick moment and you can see your VM in Azure Arc.
 
 ![Arc Overview](images/Arc_VM_1.png)
 
