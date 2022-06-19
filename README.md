@@ -86,7 +86,10 @@ After starting the script you have to fill these parameters:
     $adminUsername
 ```
 Now there is an new folder on C:\temp. In this folder there is a new "OnboardArc.ps1".
-With this script you are now able to onboard this VM to Azure Arc. Start this script with Powershell and admin rights.
+With this script you are now able to onboard this VM to Azure Arc. 
+
+Two options in the end: First to reboot the VM an the "OnboardArc" Script will start automaticalley at the next logon, or you can start the script by yourself with Powershell and admin rights. :-)
+
 
 
 
