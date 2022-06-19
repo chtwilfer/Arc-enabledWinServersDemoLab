@@ -83,7 +83,7 @@ After starting the script you have to fill these parameters:
     $location,
     $adminUsername
 ```
-Now there is an new folder on C:\temp. In this folder there ist a new "LogonScript.ps1".
+Now there is an new folder on C:\temp. In this folder there is a new "LogonScript.ps1".
 With this script you now are able to onboard this VM to Azure Arc. Start this script with Powershell and admin rights.
 
 
