@@ -6,7 +6,7 @@ There are countless Github repositories that can be used to build a demo environ
 Put the right things together! ;-)
 
 
-## Step 1 - Deploy Demo Lab via Bicep Github Repo
+## Deploy Demo Lab via Bicep Github Repo
 In this step we will create the basic environment in Azure. 
 
 For this we need:
@@ -44,78 +44,49 @@ I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network i
 
 
 
-## Step 2 - Config Azure Virtual Machine and onboard to Azure Arc
+## Config Azure Virtual Machine and onboard to Azure Arc
 
 > **Note**
 > The original Repo is here: https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/azure/azure_arm_template_win/
 
-### Create a service principal
-First you have to create a service principal for onboarding VM to Azure Arc.
+### Login to Azure, select subscription and create a Service Principal
+
 ``` 
  az login
- subscriptionId=$(az account show --query id --output tsv)
+ Get-AzSubscription | Where-Object -Property State -eq "Enabled" | Out-Gridview -PassThru | Select-AzSubscription
  az ad sp create-for-rbac -n "ArcSP" --role "Contributor" --scopes /subscriptions/$subscriptionId
 ```
 
+
 ### Register Azure Provider
-In the next step you have to register some Azure Provider on your subscription. (only for the first time)
+In the next step you have to register some (three) Azure Provider on your subscription. (only for the first time)
 ```  
  az provider register --namespace 'Microsoft.HybridCompute'
  az provider register --namespace 'Microsoft.GuestConfiguration'
+ az provider register --namespace 'Microsoft.HybridConnectivity'
 ``` 
 
 
 ### Login to VM
-After you have successfully logged on to your VM you can now start this script to onboard the VM to Azure Arc.
-The Virtual Machine was deployed with an Private IP. So you can access via the Bastion in Spoke OnPrem. 
+With Azure Bastion you can now logon to your Windows VM. 
+Next step is to use this script (https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/install_arc_agent.ps1) with Powershell and admin rights to create another script with which you can start the onboarding to Azure Arc.
 
-After Logon to the VM you can use this script (https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/install_arc_agent.ps1) with Powershell and admin rights to create another script with which you can start the onboarding to Azure Arc.
 
-#### Step 1
-Fill in these parameters in the ps1 script "install_arc_agent.ps1".
+Copy and paste "install_arc_agent.ps1" to your Windows VM and start the script with admin rights. 
+After starting the script you have to fill these parameters:
 ```
-    [string]$subscriptionId,
-    [string]$appId,
-    [string]$password,
-    [string]$tenantId,
-    [string]$resourceGroup,
-    [string]$location,
-    [string]$adminUsername
+    $subscriptionId,
+    $appId,
+    $password, (=> AppID password)
+    $tenantId,
+    $resourceGroup,
+    $location,
+    $adminUsername
 ```
-
-#### Step 2
-Use install_arc_agent.ps1
-
-#### Step 3
-Use Logon_Script.ps1 to start Onboarding to Arc
+Now there is an new folder on C:\temp. In this folder there ist a new "LogonScript.ps1".
+With this script you now are able to onboard this VM to Azure Arc. Start this script with Powershell and admin rights.
 
 
-
-
-
-
-### VM Deployment
-However, before we can create the Virtual Machine, we must first "read" the parameters to populate the azuredeploy.parameters.json file.
-
-```
-vmSize =
-vmName =
-adminUsername =
-adminPassword =
-resourceGroup = rg-hub
-appId =
-password =
-tenantId =
-subscriptionId =
-location =
-```
-
-Once the parameters are found and entered into the file, we can now start the deployment.
-
-```
-az group create --name Arc-Servers-Win-Demo --location "west europe" --tags "Project=azure_arc_servers"
-az deployment group create --resource-group rg-onprem --name arcwinsrvdemo --template-file C:\temp\Arc-enabledWinServersDemoLab\ARM\azuredeploy.json --parameters https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/ARM/azuredeploy.parameters.json
-```
 
 ## Step 3 - Azure Portal - Arc Overview
 
