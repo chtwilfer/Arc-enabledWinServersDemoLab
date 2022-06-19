@@ -32,8 +32,8 @@ param (
 New-Item -Path "C:\" -Name "tmp" -ItemType "directory" -Force
 
 # Creating PowerShell Logon Script
-$LogonScript = @'
-Start-Transcript -Path C:\tmp\LogonScript.log
+$OnboardArc = @'
+Start-Transcript -Path C:\tmp\OnboardArc.log
 
 ## Configure the OS to allow Azure Arc Agent to be deploy on an Azure VM
 
@@ -63,14 +63,14 @@ msiexec /i AzureConnectedMachineAgent.msi /l*v installationlog.txt /qn | Out-Str
  --tags "Project=azure_arc_servers" `
  --correlation-id "d009f5dd-dba8-4ac7-bac9-b54ef3a6671a"
 
-Unregister-ScheduledTask -TaskName "LogonScript" -Confirm:$False
+Unregister-ScheduledTask -TaskName "OnboardArc" -Confirm:$False
 Stop-Process -Name powershell -Force
-'@ > C:\tmp\LogonScript.ps1
+'@ > C:\tmp\OnboardArc.ps1
 
 # Creating LogonScript Windows Scheduled Task
 $Trigger = New-ScheduledTaskTrigger -AtLogOn
-$Action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument 'C:\tmp\LogonScript.ps1'
-Register-ScheduledTask -TaskName "LogonScript" -Trigger $Trigger -User "${adminUsername}" -Action $Action -RunLevel "Highest" -Force
+$Action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument 'C:\tmp\OnboardArc.ps1'
+Register-ScheduledTask -TaskName "OnboardArc" -Trigger $Trigger -User "${adminUsername}" -Action $Action -RunLevel "Highest" -Force
 
 # Disabling Windows Server Manager Scheduled Task
 Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask
