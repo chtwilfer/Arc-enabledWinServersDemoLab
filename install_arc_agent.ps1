@@ -12,7 +12,7 @@ param (
  [string] $tenantID,
  
  [Parameter(Mandatory=$True)]
- [string] $appI,
+ [string] $appID,
  
  [Parameter(Mandatory=$True)]
  [string] $password,
