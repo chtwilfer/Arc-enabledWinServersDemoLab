@@ -66,12 +66,9 @@ In the next step you have to register some Azure Provider on your subscription. 
 
 ### Login to VM
 After you have successfully logged on to your VM you can now start this script to onboard the VM to Azure Arc.
-The Virtual Machine was deployed with an PIP. So you can access via RDP. 
+The Virtual Machine was deployed with an Private IP. So you can access via the Bastion in Spoke OnPrem. 
 
-> **Note**
-> Use RDP over PIP only für Testing and Demo. Please do not use it for production!
-
-Copy this script (https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/install_arc_agent.ps1) to your VM an start with admin rights from Powershell.
+After Logon to the VM you can use this script (https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/install_arc_agent.ps1) with Powershell and admin rights to start the onboarding to Azure Arc.
 
 
 
