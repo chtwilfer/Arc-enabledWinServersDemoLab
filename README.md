@@ -72,9 +72,21 @@ The Virtual Machine was deployed with an Private IP. So you can access via the B
 After Logon to the VM you can use this script (https://raw.githubusercontent.com/chtwilfer/Arc-enabledWinServersDemoLab/main/install_arc_agent.ps1) with Powershell and admin rights to create another script with which you can start the onboarding to Azure Arc.
 
 #### Step 1
-Use install_arc_agent.ps1
+Fill in these parameters in the ps1 script "install_arc_agent.ps1".
+```
+    [string]$subscriptionId,
+    [string]$appId,
+    [string]$password,
+    [string]$tenantId,
+    [string]$resourceGroup,
+    [string]$location,
+    [string]$adminUsername
+```
 
 #### Step 2
+Use install_arc_agent.ps1
+
+#### Step 3
 Use Logon_Script.ps1 to start Onboarding to Arc
 
 
