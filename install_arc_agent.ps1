@@ -1,11 +1,24 @@
 param (
-    [string]$subscriptionId,
-    [string]$appId,
-    [string]$password,
-    [string]$tenantId,
-    [string]$resourceGroup,
-    [string]$location,
-    [string]$adminUsername
+ [Parameter(Mandatory=$True)]
+ [string] $location,
+ 
+ [Parameter(Mandatory=$True)]
+ [string] $resourceGroup,
+
+ [Parameter(Mandatory=$True)]
+ [string] $subscriptionID,
+
+ [Parameter(Mandatory=$True)]
+ [string] $tenantID,
+ 
+ [Parameter(Mandatory=$True)]
+ [string] $appI,
+ 
+ [Parameter(Mandatory=$True)]
+ [string] $password,
+ 
+ [Parameter(Mandatory=$True)]
+ [string] $adminusername
 )
 
 [System.Environment]::SetEnvironmentVariable('subscriptionId', $subscriptionId,[System.EnvironmentVariableTarget]::Machine)
