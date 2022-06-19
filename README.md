@@ -37,7 +37,7 @@ I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network i
 |Fill out as shown|![Step2](images/HubVNet_2.PNG)|
 |No Spoke VNet|![Step3](images/SpokeVNet_3.PNG)|
 |Fill out as shown|![Step4](images/OnPremVNet_.PNG)|
-|One VM in Spoke OnPrem VNet|![Step4](images/VirtualMachines_5.png)|
+|One VM in Spoke OnPrem|![Step4](images/VirtualMachines_5.png)|
 |Admin Credentials|![Step5](images/VirtualMachines_6.png)|
 |Setup Tags|fill out, what you want|
 |Validate and Deploy|click ;-)|
@@ -69,7 +69,7 @@ After you have successfully logged on to your VM you can now start this script t
 The Virtual Machine was deployed with an PIP. So you can access via RDP. 
 
 > **Note**
-> Use this only für Testing and Demo. Please use ist not for production.
+> Use RDP over PIP only für Testing and Demo. Please do not use it for production!
 
 
 
