@@ -14,7 +14,7 @@ For this we need:
 - one Spoke Network (for simulated OnPrem Hybrid connectivity)
 - one Virtual Machine (Windows) in Spoke Network (OnPrem)
 
-I use a Bastian Host for connecting to the Arc Windows VM in the Spoke Network instead of an Public IP.
+I use the Bastian Host for connecting to the Arc Windows VM in the Spoke Network instead of an Public IP.
 
 
 ### Deploy to Azure
